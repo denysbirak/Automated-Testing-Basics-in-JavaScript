@@ -1,44 +1,51 @@
 // Task 1
-const car = {
-    color: 'black'
+const movies = ['Memento', 'Skyfall', 'Shutter Island', 'The Intouchables', 'Source Code', 'Interstellar', 'The Truman Show', 'Forrest Gump', 'The Matrix', 'Tenet'];
+
+for(let movie of movies){
+    console.log(movie);
 }
-console.log(car);
 
 // Task 2
-car.color = 'green';
-console.log(car);
+const carManufacturers = ['Suzuki', 'Tesla', 'Mercedes', 'Volkswagen', 'BMW', 'Kia', 'Jeep', 'Nissan', 'Chevrolet', 'Hyundai'];
+const strCarManufacturers = carManufacturers.join(',');
+console.log(strCarManufacturers);
 
-// Task 3
-car.power = function() {
-    console.log('Engine power: 500 hp')
-}
-console.log(car);
-car.power();
+const carManufacturers2 = strCarManufacturers.split(',');
+console.log(carManufacturers2);
+
+// Task3
+const friends = ['Artem', 'Igor', 'Max', 'Vlad', 'Kostya'];
+const friendsGreetings = friends.map(friend => 'Hello ' + friend);
+console.log(friendsGreetings);
 
 // Task 4
-const addAcceptedFruits = (numOfPears, numOfApples) => numOfPears + numOfApples
-console.log(addAcceptedFruits(7, 5));
+const numbers = [0, 5, 10, 15, 20, 25, 30, 35, 40, 50];
+const numbersToBooleansArray = numbers.map(number => Boolean(number));
+console.log(numbersToBooleansArray);
 
 // Task 5
-const greetWithNameInTerminal = (name) => {
-    if(name === 'Denys') {
-        console.log('Hello ' + name);
-    } else {
-        console.log('There is no such name');
-    }
-}
-greetWithNameInTerminal('Edward');
-greetWithNameInTerminal('Denys');
+const array = [1,6,7,8,3,4,5,6];
+array.sort((a, b) => b - a);
+console.log(array);
 
 // Task 6
-const calculateType = (argument) => {
-    console.log('Argument type: ' + typeof(argument))
-};
-calculateType(123);
-calculateType('abcde');
-calculateType(true);
+const array2 = [1,6,7,8,3,4,5,6];
+const filteredArray = array2.filter(e => e > 3);
+console.log(filteredArray);
 
 // Task 7
+const findIndexByValue = (arr, num) => arr.indexOf(num);
+const array3 = [0, 3, 11, 2, 12, 28, 31, 33, 70, 8];
+console.log(findIndexByValue(array3, 28));
+
+// Task 8
+let a = 0;
+
+while(a < 10){
+    console.log(a++);
+}
+
+// Task 9
 function isPrime(num) {
     if(num < 2) {
         return false;
@@ -52,5 +59,18 @@ function isPrime(num) {
 
     return true;
 }
-console.log(isPrime(4));
-console.log(isPrime(13));
+
+let primeNum = 2;
+while(primeNum < 100){
+    if(isPrime(primeNum)){
+        console.log(primeNum);
+    }
+    primeNum++;
+}
+
+// Task 10
+let oddNum = 1;
+while(oddNum < 100){
+    console.log(oddNum);
+    oddNum += 2;
+}
