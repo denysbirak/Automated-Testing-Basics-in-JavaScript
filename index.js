@@ -1,36 +1,56 @@
-let num = 123;
-let str = 'abcde';
-let bool = true;
+// Task 1
+const car = {
+    color: 'black'
+}
+console.log(car);
 
-// Task 1. Addition
-console.log('Addition:');
-console.log(str + bool);
-console.log(str + num);
-console.log(num + bool);
+// Task 2
+car.color = 'green';
+console.log(car);
 
-// Task 2. Multiplication
-console.log('\nMultiplication:');
-console.log(str * bool);
-console.log(str * num);
-console.log(num * bool);
+// Task 3
+car.power = function() {
+    console.log('Engine power: 500 hp')
+}
+console.log(car);
+car.power();
 
-// Task 3. Division
-console.log('\nDivision:');
-console.log(str / bool);
-console.log(str / num);
-console.log(num / bool);
+// Task 4
+const addAcceptedFruits = (numOfPears, numOfApples) => numOfPears + numOfApples
+console.log(addAcceptedFruits(7, 5));
 
-// Task 4. Explicit Conversion
-console.log('\nExplicit Conversion:');
+// Task 5
+const greetWithNameInTerminal = (name) => {
+    if(name === 'Denys') {
+        console.log('Hello ' + name);
+    } else {
+        console.log('There is no such name');
+    }
+}
+greetWithNameInTerminal('Edward');
+greetWithNameInTerminal('Denys');
 
-console.log('\nTo Number:');
-console.log(Number(str));
-console.log(Number(bool));
+// Task 6
+const calculateType = (argument) => {
+    console.log('Argument type: ' + typeof(argument))
+};
+calculateType(123);
+calculateType('abcde');
+calculateType(true);
 
-console.log('\nTo String:');
-console.log(String(num));
-console.log(String(bool));
+// Task 7
+function isPrime(num) {
+    if(num < 2) {
+        return false;
+    }
 
-console.log('\nTo Boolean:');
-console.log(Boolean(num));
-console.log(Boolean(str));
+    for(let i = 2; i <= Math.sqrt(num); i++){
+        if(num % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+console.log(isPrime(4));
+console.log(isPrime(13));
