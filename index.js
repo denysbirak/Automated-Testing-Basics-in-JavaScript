@@ -1,19 +1,20 @@
 // Task 1
-let str1 = 'ahb acb aeb aeeb adcb axeb';
-const re1 = /a.b/g;
-console.log(str1.match(re1));
+try {
+    console.log(a);
+    let a = 3;
+} catch {
+    console.log('let must be declared before use');
+}
 
 // Task 2
-let str2 = '2 + 3 223 2223';
-const re2 = /\b2\s*\+\s*3\b/;
-console.log(str2.match(re2)[0]);
+try {
+    let divisor = 0;
 
-// Task 3
-const currentDate = new Date();
-const day = currentDate.getDate();
-const month = currentDate.getMonth() + 1;
-const year = currentDate.getFullYear();
-
-console.log(`Day: ${day}`);
-console.log(`Month: ${month}`);
-console.log(`Year: ${year}`);
+    if(divisor === 0){
+        throw new Error('cannot be divided by zero');
+    }
+   
+    let result = 1 / divisor;
+} catch (error) {
+    console.error(error.message);
+}
